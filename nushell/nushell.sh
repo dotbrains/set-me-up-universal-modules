@@ -15,11 +15,13 @@ install_nushell_arch() {
 
     action "Installing nushell on Arch Linux"
 
-    if ! pacman -Q nushell &>/dev/null; then
-        sudo pacman -S --noconfirm nushell
-    fi
+    pacman -Q nushell &>/dev/null && {
+        success "nushell is already installed"
+        exit 0
+    }
 
-    success "nushell is already installed"
+    sudo pacman -S --noconfirm nushell
+    success "nushell installed successfully"
 }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
