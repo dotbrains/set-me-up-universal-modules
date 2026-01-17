@@ -17,12 +17,9 @@ install_nushell_arch() {
 
     if ! pacman -Q nushell &>/dev/null; then
         sudo pacman -S --noconfirm nushell
-    else
-        success "nushell is already installed"
-        exit 0
     fi
 
-    success "nushell installed successfully"
+    success "nushell is already installed"
 }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
