@@ -9,10 +9,37 @@ declare current_dir &&
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+install_nushell_arch() {
+    # Install nushell on Arch Linux using pacman
+    # See: https://wiki.archlinux.org/title/Nushell
+
+    action "Installing nushell on Arch Linux"
+
+    if ! pacman -Q nushell &>/dev/null; then
+        sudo pacman -S --noconfirm nushell
+    else
+        success "nushell is already installed"
+    fi
+
+    success "nushell installed successfully"
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 main() {
 
     ask_for_sudo
 
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Install nushell based on the operating system
+
+    if is_arch_linux; then
+        install_nushell_arch
+        exit 0
+    fi
+
+    # Use Homebrew for macOS, Linux (non-Arch), and BSD
     brew_bundle_install -f "brewfile"
 }
 
