@@ -10,16 +10,15 @@ declare current_dir &&
 LOCAL_BASH_CONFIG_FILE="${HOME}/.bash.local"
 LOCAL_FISH_CONFIG_FILE="${HOME}/.fish.local"
 
-declare -r MISE_CONFIG_DIR="${HOME}/.config/mise"
-
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-install_mise_plugin() {
+install_node() {
 
-    # Install mise plugin for Node.js if not already installed
-    if ! mise plugin list | grep -q "^node"; then
-        mise plugin install node
-    fi
+    # Install the latest version of node
+    # node is a core plugin in mise, so no plugin installation needed
+    print_in_purple "\n   Installing latest Node.js with mise...\n\n"
+    
+    mise use -g node@latest
 
 }
 
@@ -62,7 +61,7 @@ main() {
         return 1
     fi
 
-    install_mise_plugin
+    install_node
 
     add_mise_configs
 
