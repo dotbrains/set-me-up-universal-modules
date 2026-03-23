@@ -8,5 +8,4 @@ When installing the [_blueprint_ configuration](https://github.com/dotbrains/set
 
 ## License
 
-The code is available under the [MIT license](LICENSE).
-
+This project is licensed under the [PolyForm Shield License 1.0.0](https://polyformproject.org/licenses/shield/1.0.0/) — see [LICENSE](LICENSE) for details.
