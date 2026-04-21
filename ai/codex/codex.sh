@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# shellcheck source=/dev/null
+
+declare current_dir &&
+    current_dir="$(dirname "${BASH_SOURCE[0]}")" &&
+    cd "${current_dir}" &&
+    source "$HOME/set-me-up/dotfiles/utilities/utilities.sh"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+main() {
+
+    ask_for_sudo
+
+    if ! cmd_exists "codex"; then
+
+        # Ensure npm is available
+        if ! cmd_exists "npm"; then
+            error "npm is required to install codex"
+            return 1
+        fi
+
+        npm install -g @openai/codex
+    fi
+
+}
+
+main
