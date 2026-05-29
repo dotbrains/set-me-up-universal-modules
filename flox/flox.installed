@@ -1,0 +1,4 @@
+#!/bin/bash
+# shellcheck source=/dev/null
+# smu --status marker: exit 0 if Flox is installed.
+cmd_exists "flox"

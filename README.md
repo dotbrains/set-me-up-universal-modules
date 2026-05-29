@@ -13,6 +13,7 @@ universal/
 ├── ai/               # claude-code, codex, copilot-cli, docker-sandboxes,
 │                     #   gemini-cli, herdr, opencode, pi-coding-agent, superset
 ├── base/             # Bootstraps the smu environment (rcm, dotfile sync, etc.)
+├── flox/             # Flox declarative dev environments (cross-OS)
 ├── homebrew/         # Homebrew itself (cross-OS)
 ├── mise/             # Polyglot version manager (entry point)
 ├── go/               # goenv, mise
