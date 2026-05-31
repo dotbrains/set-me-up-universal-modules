@@ -1,0 +1,16 @@
+version = 1
+
+# Reproducible helper toolchain for universal module development.
+
+[install]
+bash.pkg-path = "bash"
+shellcheck.pkg-path = "shellcheck"
+nodejs.pkg-path = "nodejs_20"
+
+[options]
+systems = [
+  "aarch64-darwin",
+  "x86_64-darwin",
+  "aarch64-linux",
+  "x86_64-linux",
+]
