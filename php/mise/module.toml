@@ -1,0 +1,13 @@
+id = "php/mise"
+
+[adapters.rcm]
+path = "."
+
+[adapters.home-manager]
+path = "home-manager.nix"
+
+[adapters.nix-darwin]
+path = "nix-darwin.nix"
+
+[adapters.nixos]
+path = "nixos.nix"
