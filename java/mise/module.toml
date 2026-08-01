@@ -2,12 +2,28 @@ id = "java/mise"
 
 [adapters.rcm]
 path = "."
+platforms = ["linux", "macos"]
+requires_root = false
+secrets = false
+reboot_required = false
 
 [adapters.home-manager]
 path = "home-manager.nix"
+platforms = ["linux", "macos"]
+requires_root = false
+secrets = false
+reboot_required = false
 
 [adapters.nix-darwin]
 path = "nix-darwin.nix"
+platforms = ["macos"]
+requires_root = false
+secrets = false
+reboot_required = false
 
 [adapters.nixos]
 path = "nixos.nix"
+platforms = ["nixos"]
+requires_root = false
+secrets = false
+reboot_required = false
