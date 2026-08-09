@@ -5,7 +5,10 @@
 declare current_dir &&
     current_dir="$(dirname "${BASH_SOURCE[0]}")" &&
     cd "${current_dir}" &&
-    source "$HOME/set-me-up/dotfiles/utilities/utilities.sh"
+    source "$HOME/set-me-up/dotfiles/utilities/import.sh"
+
+smu::import system
+smu::import homebrew
 
 declare -r RBENV_DIRECTORY="$HOME/.rbenv"
 

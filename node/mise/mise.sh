@@ -5,7 +5,10 @@
 declare current_dir &&
     current_dir="$(dirname "${BASH_SOURCE[0]}")" &&
     cd "${current_dir}" &&
-    source "$HOME/set-me-up/dotfiles/utilities/utilities.sh"
+    source "$HOME/set-me-up/dotfiles/utilities/import.sh"
+
+smu::import base
+smu::import system
 
 LOCAL_BASH_CONFIG_FILE="${HOME}/.bash.local"
 LOCAL_FISH_CONFIG_FILE="${HOME}/.fish.local"
