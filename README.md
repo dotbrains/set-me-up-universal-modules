@@ -2,7 +2,7 @@
 
 [![License: PolyForm Shield 1.0.0](https://img.shields.io/badge/License-PolyForm%20Shield%201.0.0-blue.svg)](https://polyformproject.org/licenses/shield/1.0.0)
 
-This repository is designed to be used as a submodule to the [`set-me-up` blueprint](https://github.com/dotbrains/set-me-up-blueprint) repository. It contains modules that work on any supported OS — primarily polyglot version managers and language-specific tooling.
+This repository is designed to be used as a submodule to the [`set-me-up` blueprint](https://github.com/smeltery/set-me-up-blueprint) repository. It contains modules that work on any supported OS — primarily polyglot version managers and language-specific tooling.
 
 ## Structure
 
@@ -37,7 +37,7 @@ Each module directory contains one of:
 - **`brewfile`** — a few modules are pure brewfiles that the install can be expressed declaratively (e.g. `mise/brewfile`).
 - **`packages`** — used when an install is fully expressible via the Debian DSL (rare here; see `node/npm/packages` for an npm-on-Debian variant).
 
-The `smu` installer resolves a module by name and runs whichever artifact it finds. See the [installer README](https://github.com/dotbrains/set-me-up-installer#discovering-modules) for the full module-resolution rules and the `-p` / `-i` / `-l` flags.
+The `smu` installer resolves a module by name and runs whichever artifact it finds. See the [installer README](https://github.com/smeltery/set-me-up-installer#discovering-modules) for the full module-resolution rules and the `-p` / `-i` / `-l` flags.
 
 ## Cross-platform handling
 
@@ -66,11 +66,11 @@ If a `*.sh` module shares its directory with a `brewfile` or `packages` file, `s
 
 > **Note:** at the time of writing, none of the universal `*.sh` modules ship sibling `.installed` / `.uninstall.sh` files. Authoring them is an opt-in, per-module choice; modules without them install as before but report `unknown` under `--status` and are skipped by `--uninstall`. Contributions welcome.
 
-See the [installer README](https://github.com/dotbrains/set-me-up-installer#auditing-whats-installed) for the full status/uninstall reference and authoring examples.
+See the [installer README](https://github.com/smeltery/set-me-up-installer#auditing-whats-installed) for the full status/uninstall reference and authoring examples.
 
 ## _Why abstract these modules to an external repository?_
 
-When installing the [_blueprint_ configuration](https://github.com/dotbrains/set-me-up-installer/blob/main/install.sh#L229), we need to be able to obtain our custom modules defined in your blueprint as well as the set of universal modules that _set-me-up_ provides.
+When installing the [_blueprint_ configuration](https://github.com/smeltery/set-me-up-installer/blob/main/install.sh#L229), we need to be able to obtain our custom modules defined in your blueprint as well as the set of universal modules that _set-me-up_ provides.
 
 ## License
 
