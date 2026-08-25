@@ -10,7 +10,7 @@ Modules are organized by language or tool family. Most language families offer m
 
 ```
 universal/
-├── ai/               # claude-code, codex, copilot-cli, docker-sandboxes,
+├── ai/               # claude-code, codex, copilot-cli, cursor-cli, docker-sandboxes,
 │                     #   gemini-cli, herdr, opencode, pi-coding-agent, superset
 ├── base/             # Bootstraps the smu environment (rcm, dotfile sync, etc.)
 ├── flox/             # Flox declarative dev environments (cross-OS)
